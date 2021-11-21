@@ -52,7 +52,7 @@ class Store {
       items: this.state.items.concat({
         code,
         title: 'Новая запись №'+code,
-        target: 0,
+        counter: 0,
       })
     });
   }
@@ -76,7 +76,7 @@ class Store {
       items: this.state.items.map(item => {
         if (item.code === code){
           if (item.selected) {
-            item.target++;
+            item.counter++;
           }
           item.selected = !item.selected;
         }
