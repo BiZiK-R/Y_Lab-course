@@ -52,7 +52,6 @@ class Store {
       items: this.state.items.concat({
         code,
         title: 'Новая запись №'+code,
-        counter: 0,
       })
     });
   }
@@ -75,14 +74,20 @@ class Store {
     this.setState({
       items: this.state.items.map(item => {
         if (item.code === code){
-          if (item.selected) {
-            item.counter++;
-          }
+          //console.log(item.selected);
+          this.counterItem(item);
           item.selected = !item.selected;
         }
         return item;
       })
     });
+  }
+
+  counterItem(item) {
+    if (!item.selected) {
+      if (typeof(item.counter) === 'undefined') item.counter = +!!item.counter;
+      item.counter++;
+    }
   }
 }
 

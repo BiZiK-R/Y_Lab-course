@@ -8,13 +8,13 @@ const root = document.getElementById("app");
 // Состояние приложения
 const store = new Store({
   items: [
-    {code: 1, title: 'Название элемента', counter: 0},
-    {code: 2, title: 'Некий объект', counter: 0},
-    {code: 3, title: 'Заголовок', counter: 0},
-    {code: 4, title: 'Короткое название', counter: 0},
-    {code: 5, title: 'Запись', counter: 0},
-    {code: 6, title: 'Пример названия', counter: 0},
-    {code: 7, title: 'Седьмой', counter: 0}
+    {code: 1, title: 'Название элемента'},
+    {code: 2, title: 'Некий объект'},
+    {code: 3, title: 'Заголовок'},
+    {code: 4, title: 'Короткое название'},
+    {code: 5, title: 'Запись'},
+    {code: 6, title: 'Пример названия'},
+    {code: 7, title: 'Седьмой'}
   ]
 });
 
