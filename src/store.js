@@ -85,7 +85,7 @@ class Store {
 
   counterItem(item) {
     if (!item.selected) {
-      if (typeof(item.counter) === 'undefined') item.counter = +!!item.counter;
+      if (typeof(item.counter) === 'undefined') item.counter = 0;
       item.counter++;
     }
   }
